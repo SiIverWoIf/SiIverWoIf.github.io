@@ -1,225 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silver Wolf</title>
+    <title>Silver Wolf weboldala</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-        
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #070707;
-            padding: 10px 20px;
-            flex-wrap: wrap;
-            z-index: 100;
-            position: relative;
-        }
-        
-        nav img {
-            height: 50px;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s ease-in-out;
-        }
-        
-        nav ul li a:hover {
-            color: #bb86fc;
-        }
-        
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: #ffffff;
-        }
-        
-        .header {
-            text-align: center;
-            padding: 40px 20px 20px 20px;
-        }
-        
-        .header h1 {
-            font-size: 3em;
-            color: #bb86fc;
-            margin: 0;
-        }
-        
-        .main-content {
-            display: flex;
-            flex: 1;
-            position: relative;
-        }
-        
-        .content-wrapper {
-            flex: 1;
-            padding: 30px;
-            z-index: 1;
-        }
-        
-        .content h2 {
-            color: #bb86fc;
-        }
-        
-        #overview {
-            text-align: center;
-        }
-        
-        footer {
-            background-color: #1f1f1f;
-            color: #bb86fc;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: auto;
-            width: 100%;
-        }
-        
-        .side-image {
-            background-image: url('swolf.png');
-            background-position: center center;
-            background-repeat: no-repeat;
-            flex: 1;
-        }
-        
-        @media screen and (min-width: 768px) {
-            .side-image {
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 50%;
-                height: 100%;
-                z-index: 0;
-                background-size: cover;
-            }
-            
-            .content-wrapper {
-                margin-right: 50%;
-                max-width: 50%;
-            }
-        }
-        
-        @media screen and (max-width: 767px) {
-            .main-content {
-                flex-direction: column;
-            }
-            
-            .side-image {
-                position: relative;
-                width: 100%;
-                height: 250px;
-                background-position: center;
-                background-size: contain;
-                background-color: #121212;
-                order: 1;
-                margin: 0 auto;
-            }
-            
-            .content-wrapper {
-                margin-right: 0;
-                max-width: 100%;
-                order: 2;
-                padding: 20px;
-                text-align: center;
-            }
-            
-            .menu-toggle {
-                display: block;
-                margin-left: auto;
-                padding-right: 5px;
-            }
-            
-            nav {
-                justify-content: space-between;
-                padding: 10px 15px;
-            }
-            
-            nav img {
-                max-width: 80%;
-                height: auto;
-                max-height: 50px;
-            }
-            
-            nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                background-color: #070707;
-            }
-            
-            nav ul.show {
-                display: flex;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-            }
-            
-            nav ul li {
-                margin: 10px 0;
-            }
-            
-            .header {
-                padding: 30px 15px;
-            }
-            
-            .header h1 {
-                font-size: 2.5em;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .header h1 {
-                font-size: 1.8em;
-                margin-bottom: 15px;
-            }
-            
-            .side-image {
-                height: 200px;
-            }
-            
-            .content-wrapper {
-                padding: 20px 15px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <nav>
-        <img src="Kepernyokep-2025-03-18-140742-removebg-preview.png" alt="Silver Wolf Icon">
+        <img src="Kepernyokep-2025-03-18-140742-removebg-preview.png" alt="Silver Wolf Ikon">
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <ul id="nav-menu">
-            <li><a href="#overview">Home</a></li>
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#login">Log In</a></li>
+            <li><a href="#home">Főoldal</a></li>
+            <li><a href="#projects">Projektek</a></li>
+            <li><a href="#aboutme">Rólam</a></li>
         </ul>
     </nav>
     
@@ -231,8 +27,8 @@
         <div class="content-wrapper">
             <div class="content">
                 <section id="overview">
-                    <h2>Under Construction</h2>
-                    <p>This site is currently under construction. Come back later!</p>
+                    <h2>Nem bug, hanem feature</h2>
+                    <p>A weboldal <span id="hacked">hackelés</span> fejlesztés alatt áll. Nézz vissza később!</p>
                 </section>
             </div>
         </div>
@@ -243,28 +39,5 @@
         ©2025 Silver Wolf
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('show');
-        }
-        
-        document.querySelectorAll('#nav-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.getElementById('nav-menu').classList.remove('show');
-            });
-        });
-        
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('nav');
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.menu-toggle');
-            
-            if (!nav.contains(event.target) || 
-                (event.target !== toggle && !toggle.contains(event.target) && !menu.contains(event.target))) {
-                menu.classList.remove('show');
-            }
-        });
-    </script>
 </body>
 </html>
