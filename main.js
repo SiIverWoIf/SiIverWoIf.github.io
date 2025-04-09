@@ -3,6 +3,10 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 
+function openUrl(url) {
+    window.open(url, '_blank');
+  }
+
 document.querySelectorAll('#nav-menu a').forEach(link => {
     link.addEventListener('click', function() {
         document.getElementById('nav-menu').classList.remove('show');
