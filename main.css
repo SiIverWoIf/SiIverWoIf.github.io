@@ -57,6 +57,64 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
+/* Logo Link Styling */
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-link img {
+    height: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link img:hover {
+    opacity: 0.8;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #070707;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    z-index: 1000;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1f1f1f;
+    color: #bb86fc;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .header {
     text-align: center;
     padding: 40px 20px 20px 20px;
@@ -90,21 +148,18 @@ nav ul li a:hover {
     text-align: center;
 }
 
-footer {
-    background-color: #1f1f1f;
-    color: #bb86fc;
-    text-align: center;
-    padding: 20px 0;
-    position: sticky;
-    bottom: 0;
-    z-index: 100;
-    width: 100%;
-}
-
 .side-image {
     background-image: url('swolf.png');
     background-position: center center;
     background-repeat: no-repeat;
+    flex: 1;
+}
+
+/* Tool page side image */
+.side-image-tool {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
     flex: 1;
 }
 
@@ -113,6 +168,213 @@ footer {
     text-decoration: line-through wavy;
 }
 
+/* Tool Cards Styling */
+#tools {
+    text-align: center;
+    padding: 20px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tool-card {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(187, 134, 252, 0.2);
+}
+
+.tool-card h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.tool-card p {
+    color: #cccccc;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.tool-card button {
+    background-color: #bb86fc;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.tool-card button:hover {
+    background-color: #9c6fd8;
+}
+
+/* Tool Container Styling */
+.tool-container {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.tool-container h2 {
+    color: #bb86fc;
+    margin-bottom: 30px;
+}
+
+.tool-container input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.tool-container input:focus {
+    outline: none;
+    border-color: #bb86fc;
+}
+
+.tool-container button {
+    background-color: #bb86fc;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tool-container button:hover {
+    background-color: #9c6fd8;
+}
+
+/* Result Styling */
+.result-box {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.result-box a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+    word-break: break-all;
+    flex: 1;
+    margin-right: 10px;
+}
+
+#copy-btn {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+#copy-btn:hover {
+    background-color: #444;
+}
+
+/* Thumbnail Styling */
+#yt-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.thumbnail-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1f1f1f;
+    color: #bb86fc;
+    text-align: center;
+    padding: 4px 0;  /* Minimal padding */
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    font-size: 0.7em;
+    height: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.copyright-notice {
+    background-color: #1a1a1a;
+    padding: 3px 6px;
+    margin: 1px auto 2px;
+    border-radius: 2px;
+    border-left: 1px solid #bb86fc;
+    display: inline-block;
+    max-width: 98%;
+}
+
+.copyright-notice p {
+    margin: 0;
+    font-size: 0.7em;
+    line-height: 1.0;
+    color: #cccccc;
+    display: inline;  /* Makes paragraphs flow together */
+}
+
+.copyright-notice p + p::before {
+    content: " • ";  /* Bullet separator instead of line breaks */
+    color: #666;
+}
+
+.footer-links {
+    margin-top: 1px;
+}
+
+.footer-links a {
+    font-size: 0.7em;
+}
+
+
+/* Desktop Responsive Design */
 @media screen and (min-width: 768px) {
     .side-image {
         position: fixed;
@@ -124,18 +386,39 @@ footer {
         background-size: cover;
     }
     
+    .side-image-tool {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 0;
+    }
+    
     .content-wrapper {
         margin-right: 50%;
         max-width: 50%;
     }
 }
 
+/* Mobile Responsive Design */
 @media screen and (max-width: 767px) {
     .main-content {
         flex-direction: column;
     }
     
     .side-image {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-position: center;
+        background-size: contain;
+        background-color: #121212;
+        order: 1;
+        margin: 0 auto;
+    }
+    
+    .side-image-tool {
         position: relative;
         width: 100%;
         height: 250px;
@@ -165,7 +448,7 @@ footer {
         padding: 10px 15px;
     }
     
-    nav img {
+    .logo-link img {
         max-width: 80%;
         height: auto;
         max-height: 50px;
@@ -192,6 +475,22 @@ footer {
         margin: 10px 0;
     }
     
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background-color: #1f1f1f;
+        margin-left: 20px;
+    }
+    
+    .dropdown.show .dropdown-menu {
+        display: block;
+    }
+    
+    nav ul.show .dropdown-menu {
+        display: block;
+    }
+    
     .header {
         padding: 30px 15px;
     }
@@ -199,8 +498,61 @@ footer {
     .header h1 {
         font-size: 2.5em;
     }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .tool-card {
+        padding: 25px 15px;
+    }
+    
+    .tool-container {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+    
+    .result-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .result-box a {
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .thumbnail-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    footer {
+        padding: 3px 0;
+        font-size: 0.65em;
+    }
+    
+    .copyright-notice {
+        padding: 2px 4px;
+        margin: 1px 5px;
+        max-width: 95%;
+    }
+    
+    .copyright-notice p {
+        margin: 0;
+        font-size: 0.65em;
+        line-height: 0.9;
+    }
+    
+    .footer-content {
+        padding: 0 5px;
+    }
+
 }
 
+/* Extra Small Mobile Devices */
 @media screen and (max-width: 480px) {
     .header h1 {
         font-size: 1.8em;
@@ -208,6 +560,10 @@ footer {
     }
     
     .side-image {
+        height: 200px;
+    }
+    
+    .side-image-tool {
         height: 200px;
     }
     

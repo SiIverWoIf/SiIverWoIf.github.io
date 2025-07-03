@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Wolf -> YT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SiIverWoIf/SiIverWoIf.github.io/refs/heads/main/favicon.ico">
+    <script src="main.js"></script>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="logo-link">
+        <img src="icon.png" alt="Silver Wolf icon">
+    </a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#projects">Tools ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="url-shortener.html">URL shortener</a></li>
+                <li><a href="yt-thumbnail.html">YT thumbnail downloader</a></li>
+            </ul>
+        </li>
+        <!--<li><a href="#aboutme">About me</a></li>-->
+    </ul>
+</nav>
+
+    
+    <div class="header animate__animated animate__fadeInDown">
+        <h1>YT thumbnail downloader</h1>
+    </div>
+    
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div class="content">
+                <section id="yt-thumbnail-downloader">
+                    <div class="tool-container">
+                        <h2>Enter YT video link here:</h2>
+                        <input type="text" id="yt-url-input" placeholder="https://example.com" />
+                        <button onclick="getYouTubeThumbnail()">Get</button>
+                        <div id="thumbnail-result" style="display:none;">
+                            <img id="yt-thumbnail" src="" alt="YouTube Thumbnail" />
+                            <div class="thumbnail-options">
+                                <button onclick="downloadThumbnail()">Download</button>
+                                <button onclick="copyThumbnailUrl()">Copy URL of image</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="side-image-tool" style="background-image: url('image.png');"></div>
+    </div>
+
+<footer>
+    <div class="footer-content">
+        <div class="copyright-notice">
+            <p><strong>Copyright Disclaimer:</strong></p>
+            <p>Silver Wolf is a character owned by <strong>miHoYo/HoYoverse</strong> from Honkai Star Rail. This website is a fan-made project and is not affiliated with or endorsed by miHoYo/HoYoverse. All character artwork and related materials are property of their respective owners and are used here for non-commercial, educational, and fan appreciation purposes under fair use.</p>
+            <p>If you are the owner of any artwork used on this site and would like it removed, please contact me.</p>
+        </div>
+        <div class="footer-links">
+            <a onclick="openUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">©2025 Silver Wolf</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

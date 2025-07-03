@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silver Wolf weboldala</title>
+    <title>Silver Wolf</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/SiIverWoIf/SiIverWoIf.github.io/refs/heads/main/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="main.js"></script>
 </head>
 <body>
-    <nav>
-        <img src="Kepernyokep-2025-03-18-140742-removebg-preview.png" alt="Silver Wolf Ikon">
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul id="nav-menu">
-            <li><a href="#home">Főoldal</a></li>
-            <li><a href="#projects">Projektek</a></li>
-            <li><a href="#aboutme">Rólam</a></li>
-        </ul>
-    </nav>
+<nav>
+    <a href="index.html" class="logo-link">
+        <img src="icon.png" alt="Silver Wolf icon">
+    </a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#projects">Tools ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="url-shortener.html">URL shortener</a></li>
+                <li><a href="yt-thumbnail.html">YT thumbnail downloader</a></li>
+            </ul>
+        </li>
+        <!--<li><a href="#aboutme">About me</a></li>-->
+    </ul>
+</nav>
+
     
     <div class="header animate__animated animate__fadeInDown">
         <h1>Silver Wolf</h1>
@@ -27,18 +36,45 @@
     <div class="main-content">
         <div class="content-wrapper">
             <div class="content">
+                <section id="tools">
+                    <h2>Tools</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h3>URL shortener</h3>
+                            <p>Shorten long URLs quickly and easily</p>
+                            <button onclick="window.location.href='url-shortener.html'">Open →</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h3>YouTube thumbnail downloader</h3>
+                            <p>Download thumbnails of YouTube videos in high quality</p>
+                            <button onclick="window.location.href='yt-thumbnail.html'">Open →</button>
+                        </div>
+                    </div>
+                </section>
+                
                 <section id="overview">
-                    <h2>Ez nem bug, hanem feature</h2>
-                    <p>A weboldal <span id="hacked">hackelés</span> fejlesztés alatt áll. Nézz vissza később!</p>
+                    <h2>Hacking in progress...</h2>
+                    <p>This website is currently getting <span id="hacked">hacked</span> developed. Check back later!</p>
                 </section>
             </div>
         </div>
         <div class="side-image"></div>
     </div>
 
-    <footer>
-        <a onclick="openUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">©2025 Silver Wolf</a>
-    </footer>
+<footer>
+    <div class="footer-content">
+        <div class="copyright-notice">
+            <p><strong>Copyright Disclaimer:</strong></p>
+            <p>Silver Wolf is a character owned by <strong>miHoYo/HoYoverse</strong> from Honkai Star Rail. This website is a fan-made project and is not affiliated with or endorsed by miHoYo/HoYoverse. All character artwork and related materials are property of their respective owners and are used here for non-commercial, educational, and fan appreciation purposes under fair use.</p>
+            <p>If you are the owner of any artwork used on this site and would like it removed, please contact me.</p>
+        </div>
+        <div class="footer-links">
+            <a onclick="openUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">©2025 Silver Wolf</a>
+        </div>
+    </div>
+</footer>
+
 
 </body>
 </html>
